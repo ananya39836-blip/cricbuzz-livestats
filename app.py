@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from connection import get_connection
 
-st.set_page_config(page_title="Cricbuzz LiveStats", page_icon="🏏", layout="wide")
+st.set_page_config(page_title="Cricbuzz LiveStats", page_icon="🏏", layout="wide", initial_sidebar_state="expanded")
 
 st.title("🏏 Cricbuzz LiveStats Dashboard")
 st.markdown("**Real-Time Cricket Insights & SQL-Based Analytics**")
