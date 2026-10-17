@@ -1,7 +1,7 @@
 # 🏏 Cricbuzz LiveStats: Real-Time Cricket Insights & SQL-Based Analytics
 
 **Real-time cricket insights and SQL-based analytics.**
-A multi-page Streamlit dashboard that combines live data from the Cricbuzz API (via RapidAPI) with a SQL database: live scorecards, top player stats, 27 analytical queries covering 25 SQL questions, and full CRUD management.
+A multi-page Streamlit dashboard that combines live data from the Cricbuzz API (via RapidAPI) with a SQL database: live scorecards, top player stats, 25 analytical queries covering 25 SQL questions, and full CRUD management.
 
 > **Author:** [Ananya](https://github.com/ananya39836-blip)
 > **Repository:** [GitHub Repository](https://github.com/ananya39836-blip/cricbuzz-livestats)
