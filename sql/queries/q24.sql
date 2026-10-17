@@ -1,0 +1,2 @@
+-- Q24: Batting partnerships synergy ranking
+SELECT p1.full_name AS batter1, p2.full_name AS batter2, COUNT(*) AS partnership_count, ROUND(AVG(bp1.runs_scored + bp2.runs_scored), 2) AS avg_partnership_runs, MAX(bp1.runs_scored + bp2.runs_scored) AS highest_partnership FROM batting_performances bp1 JOIN batting_performances bp2 ON bp1.innings_id = bp2.innings_id AND bp2.batting_position = bp1.batting_position + 1 JOIN players p1 ON bp1.player_id = p1.player_id JOIN players p2 ON bp2.player_id = p2.player_id GROUP BY batter1, batter2 ORDER BY avg_partnership_runs DESC;

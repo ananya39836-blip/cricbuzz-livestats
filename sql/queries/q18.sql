@@ -1,0 +1,2 @@
+-- Q18: Economical limited-overs bowlers (ODI and T20I)
+SELECT p.full_name, ROUND(AVG(pcs.economy_rate), 2) AS overall_economy, SUM(pcs.wickets_taken) AS total_wickets FROM player_career_stats pcs JOIN players p ON pcs.player_id = p.player_id WHERE pcs.format IN ('ODI', 'T20I') GROUP BY p.player_id, p.full_name ORDER BY overall_economy ASC;

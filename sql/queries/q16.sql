@@ -1,0 +1,2 @@
+-- Q16: Yearly batting performance trend since 2020
+SELECT strftime('%Y', m.match_date) AS match_year, p.full_name, ROUND(AVG(bp.runs_scored), 2) AS avg_runs, ROUND(AVG(bp.strike_rate), 2) AS avg_strike_rate FROM batting_performances bp JOIN matches m ON bp.match_id = m.match_id JOIN players p ON bp.player_id = p.player_id WHERE m.match_date >= '2020-01-01' GROUP BY match_year, p.player_id, p.full_name;

@@ -1,0 +1,2 @@
+-- Q23: Recent player form and momentum
+SELECT p.full_name, COUNT(bp.perf_id) AS recent_innings, ROUND(AVG(bp.runs_scored), 2) AS recent_avg, SUM(CASE WHEN bp.runs_scored >= 50 THEN 1 ELSE 0 END) AS fifties_count, CASE WHEN AVG(bp.runs_scored) >= 50 THEN 'Excellent Form' WHEN AVG(bp.runs_scored) >= 35 THEN 'Good Form' WHEN AVG(bp.runs_scored) >= 20 THEN 'Average Form' ELSE 'Poor Form' END AS form_category FROM batting_performances bp JOIN players p ON bp.player_id = p.player_id GROUP BY p.player_id, p.full_name;

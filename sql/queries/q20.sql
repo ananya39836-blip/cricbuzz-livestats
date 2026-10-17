@@ -1,0 +1,2 @@
+-- Q20: Multi-format player analysis
+SELECT p.full_name, SUM(CASE WHEN pcs.format = 'Test' THEN pcs.matches_played ELSE 0 END) AS test_matches, SUM(CASE WHEN pcs.format = 'ODI' THEN pcs.matches_played ELSE 0 END) AS odi_matches, SUM(CASE WHEN pcs.format = 'T20I' THEN pcs.matches_played ELSE 0 END) AS t20i_matches, ROUND(AVG(pcs.batting_average), 2) AS avg_batting_avg FROM player_career_stats pcs JOIN players p ON pcs.player_id = p.player_id GROUP BY p.player_id, p.full_name;

@@ -1,0 +1,2 @@
+-- Q11: Compare player performance across different formats
+SELECT p.full_name, SUM(CASE WHEN pcs.format = 'Test' THEN pcs.runs_scored ELSE 0 END) AS test_runs, SUM(CASE WHEN pcs.format = 'ODI' THEN pcs.runs_scored ELSE 0 END) AS odi_runs, SUM(CASE WHEN pcs.format = 'T20I' THEN pcs.runs_scored ELSE 0 END) AS t20i_runs, ROUND(AVG(pcs.batting_average), 2) AS overall_avg FROM player_career_stats pcs JOIN players p ON pcs.player_id = p.player_id GROUP BY p.player_id, p.full_name HAVING COUNT(DISTINCT pcs.format) >= 2;

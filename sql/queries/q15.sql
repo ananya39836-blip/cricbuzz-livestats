@@ -1,0 +1,2 @@
+-- Q15: Players performing in close matches (<50 runs or <5 wickets)
+SELECT p.full_name, COUNT(DISTINCT m.match_id) AS close_matches_played, ROUND(AVG(bp.runs_scored), 2) AS avg_runs, SUM(CASE WHEN m.winner_id = p.team_id THEN 1 ELSE 0 END) AS team_wins FROM batting_performances bp JOIN matches m ON bp.match_id = m.match_id JOIN players p ON bp.player_id = p.player_id WHERE (m.victory_type = 'runs' AND m.victory_margin < 50) OR (m.victory_type = 'wickets' AND m.victory_margin < 5) GROUP BY p.player_id, p.full_name;

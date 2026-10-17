@@ -1,0 +1,2 @@
+-- Q22: Head-to-head match prediction analysis between teams
+SELECT CASE WHEN team1_id < team2_id THEN team1_id ELSE team2_id END AS t1_id, CASE WHEN team1_id < team2_id THEN team2_id ELSE team1_id END AS t2_id, COUNT(match_id) AS total_h2h_matches, SUM(CASE WHEN winner_id = team1_id THEN 1 ELSE 0 END) AS team1_wins, SUM(CASE WHEN winner_id = team2_id THEN 1 ELSE 0 END) AS team2_wins FROM matches GROUP BY t1_id, t2_id;

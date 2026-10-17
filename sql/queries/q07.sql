@@ -1,0 +1,2 @@
+-- Q7: Highest individual batting score achieved in each cricket format
+SELECT format, MAX(runs_scored) AS highest_score FROM (SELECT m.format, bp.runs_scored FROM batting_performances bp JOIN matches m ON bp.match_id = m.match_id) GROUP BY format;

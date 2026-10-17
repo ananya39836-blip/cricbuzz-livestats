@@ -1,0 +1,2 @@
+-- Q14: Bowling performance at venues
+SELECT v.venue_name, p.full_name, COUNT(DISTINCT m.match_id) AS matches_played, ROUND(AVG(bp.economy_rate), 2) AS avg_economy, SUM(bp.wickets_taken) AS total_wickets FROM bowling_performances bp JOIN matches m ON bp.match_id = m.match_id JOIN venues v ON m.venue_id = v.venue_id JOIN players p ON bp.player_id = p.player_id GROUP BY v.venue_id, p.player_id;
