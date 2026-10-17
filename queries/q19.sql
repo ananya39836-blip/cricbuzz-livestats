@@ -1,0 +1,2 @@
+-- Q19: Batsmen scoring consistency
+SELECT p.full_name, ROUND(AVG(bp.runs_scored), 2) AS avg_runs FROM batting_performances bp JOIN players p ON bp.player_id = p.player_id GROUP BY p.player_id, p.full_name ORDER BY avg_runs DESC;

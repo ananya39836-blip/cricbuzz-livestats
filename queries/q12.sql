@@ -1,0 +1,2 @@
+-- Q12: Home vs Away performance analysis
+SELECT t.team_name, SUM(CASE WHEN v.country = t.country THEN 1 ELSE 0 END) AS home_wins, SUM(CASE WHEN v.country != t.country THEN 1 ELSE 0 END) AS away_wins FROM matches m JOIN teams t ON m.winner_id = t.team_id JOIN venues v ON m.venue_id = v.venue_id GROUP BY t.team_id, t.team_name;

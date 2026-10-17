@@ -1,0 +1,2 @@
+-- Q9: All-rounders with > 1000 runs AND > 50 wickets
+SELECT p.full_name, pcs.format, pcs.runs_scored, pcs.wickets_taken FROM player_career_stats pcs JOIN players p ON pcs.player_id = p.player_id WHERE pcs.runs_scored > 1000 AND pcs.wickets_taken > 50;

@@ -1,0 +1,2 @@
+-- Q6: Count of players belonging to each playing role
+SELECT playing_role, COUNT(player_id) AS player_count FROM players WHERE playing_role IS NOT NULL GROUP BY playing_role ORDER BY player_count DESC;

@@ -1,0 +1,2 @@
+-- Q3: Top 10 highest run scorers in ODI cricket
+SELECT p.full_name, pcs.runs_scored, pcs.batting_average, pcs.centuries FROM player_career_stats pcs JOIN players p ON pcs.player_id = p.player_id WHERE pcs.format = 'ODI' ORDER BY pcs.runs_scored DESC LIMIT 10;

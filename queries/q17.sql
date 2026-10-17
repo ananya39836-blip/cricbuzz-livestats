@@ -1,0 +1,2 @@
+-- Q17: Toss advantage investigation
+SELECT toss_decision, COUNT(match_id) AS total_matches, SUM(CASE WHEN toss_winner_id = winner_id THEN 1 ELSE 0 END) AS matches_won, ROUND(SUM(CASE WHEN toss_winner_id = winner_id THEN 1.0 ELSE 0.0 END) / COUNT(match_id) * 100, 2) AS win_percentage FROM matches WHERE toss_decision IS NOT NULL GROUP BY toss_decision;
