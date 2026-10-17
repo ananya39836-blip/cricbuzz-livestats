@@ -48,21 +48,20 @@ A multi-page Streamlit dashboard that combines live data from the Cricbuzz API (
 
 ---
 
+
 ## Screenshots
 
-> *Screenshots located in the `images/` directory.*
+| Home Dashboard | Live Stats & Matches |
+| :---: | :---: |
+| ![Home](Home.png) | ![Live Stats](Live%20Stats.png) |
 
-| Home Dashboard | Live Matches & Scorecards |
-|:---:|:---:|
-| ![Home](images/home.png) | ![Live Matches](images/live_matches.png) |
+| Top Player Stats | SQL Analytics & Queries |
+| :---: | :---: |
+| ![Player Stats](Player%20Stats.png) | ![SQL Query](SQL%20Query.png) |
 
-| Top Player Stats | SQL Analytics & Visualisations |
-|:---:|:---:|
-| ![Top Stats](images/top_stats.png) | ![SQL Analytics](images/sql_analytics.png) |
-
-| CRUD Data Management | System Settings & Ingestion |
-|:---:|:---:|
-| ![CRUD](images/crud.png) | ![Settings](images/settings.png) |
+| Visualizations | Detailed Visualizations |
+| :---: | :---: |
+| ![Visualization](Visualization.png) | ![Visualization 2](Visualization-2.png) |
 
 ---
 
